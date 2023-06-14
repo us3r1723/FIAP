@@ -111,7 +111,7 @@ public class mk2 {
 							if (var == 2) {
 								if (i - valor >= 0) {
 									i -= valor;
-								}else {
+								} else {
 									vida -= 1;
 								}
 							}
@@ -150,23 +150,33 @@ public class mk2 {
 						if (var == 4) {
 							if (i + valor <= 21) {
 								i += valor;
-
+							} else {
+								vida -= 1;
 							}
 						} else {
-							if (i - valor >= 0) {
-								if (var == 3 || var == 2 && i == 12) {
+							if (var == 3) {
+								if (i - valor >= 12) {
 									i -= valor;
-								}
-							} else {
-								if (var == 1 || var == 2 || i < 12 || i > 21) {
+								} else {
 									vida -= 1;
 								}
-								if (vida <= 0 || ener < 0) {
-									bateu++;
+							} else {
 
+								if (var == 2 && i == 12 && i - valor >= 0) {
+									i -= valor;
+								} else {
+									if (var == 1) {
+										vida -= 1;
+									}
 								}
 							}
 						}
+
+						if (vida <= 0 || ener < 0) {
+							bateu++;
+
+						}
+
 					} else {
 						System.out.println("valores inválidos");
 					}
