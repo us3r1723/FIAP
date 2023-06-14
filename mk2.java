@@ -81,7 +81,6 @@ public class mk2 {
 			System.out.println("digite a potência da bateria do robô em J");
 			System.out.println("lembrando que se não for o suficiente ela vai acabar no meio do caminho");
 			ener = entrada.nextInt();
-			vida = 3;
 			while (venceu != 1 && bateu != 1) {
 
 				while (i >= 0 && i < 12 && bateu != 1) {
@@ -144,9 +143,9 @@ public class mk2 {
 							i += valor;
 						} else {
 							if (i - valor >= 0) {
-							if (var == 3 || var == 2 && i == 12) {
-								i -= valor;
-							}
+								if (var == 3 || var == 2 && i == 12) {
+									i -= valor;
+								}
 							} else {
 								if (var == 1 || var == 2 || i < 12 || i > 21) {
 									vida -= 1;
@@ -334,7 +333,7 @@ public class mk2 {
 					System.out.println("");
 					System.out.println("");
 					System.out.println(
-							"██████   █████  ██████   █████  ██████  ███████ ███    ██ ███████     ██    ██  ██████   ██████ ███████     ██    ██ ███████ ███    ██  ██████ ███████ ██    ██ \n"
+									  "██████   █████  ██████   █████  ██████  ███████ ███    ██ ███████     ██    ██  ██████   ██████ ███████     ██    ██ ███████ ███    ██  ██████ ███████ ██    ██ \n"
 									+ "██   ██ ██   ██ ██   ██ ██   ██ ██   ██ ██      ████   ██ ██          ██    ██ ██    ██ ██      ██          ██    ██ ██      ████   ██ ██      ██      ██    ██ \n"
 									+ "██████  ███████ ██████  ███████ ██████  █████   ██ ██  ██ ███████     ██    ██ ██    ██ ██      █████       ██    ██ █████   ██ ██  ██ ██      █████   ██    ██ \n"
 									+ "██      ██   ██ ██   ██ ██   ██ ██   ██ ██      ██  ██ ██      ██      ██  ██  ██    ██ ██      ██           ██  ██  ██      ██  ██ ██ ██      ██      ██    ██ \n"
@@ -350,7 +349,7 @@ public class mk2 {
 						System.out.println("");
 						System.out.println("");
 						System.out.println(
-								"             _           _            _                         _                              \n"
+										  "             _           _            _                         _                              \n"
 										+ "     /\\     | |         | |          (_)                       | |                  _        _ \n"
 										+ "    /  \\    | |__   __ _| |_ ___ _ __ _  __ _    __ _  ___ __ _| |__   ___  _   _  (_)______(_)\n"
 										+ "   / /\\ \\   | '_ \\ / _` | __/ _ \\ '__| |/ _` |  / _` |/ __/ _` | '_ \\ / _ \\| | | |   |______|  \n"
@@ -393,6 +392,7 @@ public class mk2 {
 				ener = 0;
 				bateu = 0;
 				venceu = 0;
+				vida=3;
 			}
 
 		}
