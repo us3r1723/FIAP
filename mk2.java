@@ -203,22 +203,33 @@ public class mk2 {
 						if (var == 1) {
 							if (i + valor <= 33) {
 								i += valor;
+							} else {
+								vida -= 1;
 							}
 						} else {
-							if (i - valor >= 12) {
-								if (var == 2 || var == 3 && i == 21) {
+							if (var == 2) {
+								if (i - valor >= 21) {
 									i -= valor;
+								} else {
+									vida -= 1;
 								}
 							} else {
 
-								if (var == 3 || var == 4 || i < 21 || i > 33) {
-									vida -= 1;
-								}
-								if (vida <= 0 || ener < 0) {
-									bateu++;
+								if (var == 3 && i == 21 && i - valor >= 12) {
+									i -= valor;
+								} else {
+									if (var == 4) {
+										vida -= 1;
+									}
 								}
 							}
 						}
+
+						if (vida <= 0 || ener < 0) {
+							bateu++;
+
+						}
+
 					} else {
 						System.out.println("valores inválidos");
 					}
@@ -245,22 +256,28 @@ public class mk2 {
 						if (var == 3) {
 							if (i + valor <= 39) {
 								i += valor;
+							} else {
+								vida -= 1;
 							}
 						} else {
-							if (i - valor >= 21) {
-								if (var == 4 || var == 2 && i == 33) {
+							if (var == 4) {
+								if (i - valor >= 33) {
 									i -= valor;
+								} else {
+									vida -= 1;
 								}
 							} else {
 
-								if (var == 1 || var == 2 || i < 33 || i > 39) {
-									vida -= 1;
-								}
-								if (vida <= 0 || ener < 0) {
-									bateu++;
+								if (var == 2 && i == 33 && i - valor >= 21) {
+									i -= valor;
+								} else {
+									if (var == 4) {
+										vida -= 1;
+									}
 								}
 							}
 						}
+
 					} else {
 						System.out.println("valores inválidos");
 					}
@@ -287,19 +304,24 @@ public class mk2 {
 						if (var == 1) {
 							if (i + valor <= 51) {
 								i += valor;
+							} else {
+								vida -= 1;
 							}
 						} else {
-							if (i - valor >= 33) {
-								if (var == 2 || var == 4 && i == 39) {
+							if (var == 2) {
+								if (i - valor >= 39) {
 									i -= valor;
+								} else {
+									vida -= 1;
 								}
 							} else {
 
-								if (var == 3 || var == 4 || i < 39 || i > 51) {
-									vida -= 1;
-								}
-								if (vida <= 0 || ener < 0) {
-									bateu++;
+								if (var == 4 && i == 39 && i - valor >= 33) {
+									i -= valor;
+								} else {
+									if (var == 3) {
+										vida -= 1;
+									}
 								}
 							}
 						}
@@ -328,24 +350,28 @@ public class mk2 {
 					if (valor % 3 == 0 && var < 5 && var > 0) {
 						ener -= 6;
 						if (var == 4) {
+
 							i += valor;
 							if (i >= 60) {
 								venceu++;
-							} else {
-								if (i - valor >= 39) {
-									if (var == 3 || var == 2 && i == 51) {
-										i -= valor;
-									}
-								} else {
 
-									if (var == 1 || var == 2 || i < 51) {
+							}
+						} else {
+							if (var == 3) {
+								if (i - valor >= 51) {
+									i -= valor;
+								} else {
+									vida -= 1;
+								}
+							} else {
+
+								if (var == 2 && i == 51 && i - valor >= 39) {
+									i -= valor;
+								} else {
+									if (var == 1) {
 										vida -= 1;
 									}
-									if (vida <= 0 || ener < 0) {
-										bateu++;
-									}
 								}
-
 							}
 						}
 
@@ -360,7 +386,7 @@ public class mk2 {
 					System.out.println("");
 					System.out.println("");
 					System.out.println(
-							"██████   █████  ██████   █████  ██████  ███████ ███    ██ ███████     ██    ██  ██████   ██████ ███████     ██    ██ ███████ ███    ██  ██████ ███████ ██    ██ \n"
+									  "██████   █████  ██████   █████  ██████  ███████ ███    ██ ███████     ██    ██  ██████   ██████ ███████     ██    ██ ███████ ███    ██  ██████ ███████ ██    ██ \n"
 									+ "██   ██ ██   ██ ██   ██ ██   ██ ██   ██ ██      ████   ██ ██          ██    ██ ██    ██ ██      ██          ██    ██ ██      ████   ██ ██      ██      ██    ██ \n"
 									+ "██████  ███████ ██████  ███████ ██████  █████   ██ ██  ██ ███████     ██    ██ ██    ██ ██      █████       ██    ██ █████   ██ ██  ██ ██      █████   ██    ██ \n"
 									+ "██      ██   ██ ██   ██ ██   ██ ██   ██ ██      ██  ██ ██      ██      ██  ██  ██    ██ ██      ██           ██  ██  ██      ██  ██ ██ ██      ██      ██    ██ \n"
@@ -376,7 +402,7 @@ public class mk2 {
 						System.out.println("");
 						System.out.println("");
 						System.out.println(
-								"             _           _            _                         _                              \n"
+										  "             _           _            _                         _                              \n"
 										+ "     /\\     | |         | |          (_)                       | |                  _        _ \n"
 										+ "    /  \\    | |__   __ _| |_ ___ _ __ _  __ _    __ _  ___ __ _| |__   ___  _   _  (_)______(_)\n"
 										+ "   / /\\ \\   | '_ \\ / _` | __/ _ \\ '__| |/ _` |  / _` |/ __/ _` | '_ \\ / _ \\| | | |   |______|  \n"
