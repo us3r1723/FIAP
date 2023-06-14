@@ -102,7 +102,7 @@ public class mk2 {
 					if (valor % 3 == 0 && var < 5 && var > 0) {
 						ener -= 6;
 						if (var == 1) {
-							if (i - valor <= 12) {
+							if (i + valor <= 12) {
 							i += valor;
 							}
 						} else {
@@ -142,7 +142,7 @@ public class mk2 {
 					if (valor % 3 == 0 && var < 5 && var > 0) {
 						ener -= 6;
 						if (var == 4) {
-							if (i - valor <= 21) {
+							if (i + valor <= 21) {
 								i += valor;
 							
 							}
@@ -185,7 +185,9 @@ public class mk2 {
 					if (valor % 3 == 0 && var < 5 && var > 0) {
 						ener -= 6;
 						if (var == 1) {
+							if (i + valor <= 33) {
 							i += valor;
+							}
 						} else {
 							if (i - valor >= 12) {
 								if (var == 2 || var == 3 && i == 21) {
@@ -225,7 +227,9 @@ public class mk2 {
 					if (valor % 3 == 0 && var < 5 && var > 0) {
 						ener -= 6;
 						if (var == 3) {
+							if (i + valor <= 39) {
 							i += valor;
+							}
 						} else {
 							if (i - valor >= 21) {
 								if (var == 4 || var == 2 && i == 33) {
@@ -265,7 +269,9 @@ public class mk2 {
 					if (valor % 3 == 0 && var < 5 && var > 0) {
 						ener -= 6;
 						if (var == 1) {
+							if (i + valor <= 51) {
 							i += valor;
+							}
 						} else {
 							if (i - valor >= 33) {
 								if (var == 2 || var == 4 && i == 39) {
