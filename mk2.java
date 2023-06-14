@@ -8,7 +8,7 @@ public class mk2 {
 		// TODO Auto-generated method stub
 		Scanner entrada = new Scanner(System.in);
 		char jogo = 'z';
-		int i = 0, var = 0, valor = 0, ener = 0, bateu = 0, venceu = 0, jogoInt = 1,vida = 3;
+		int i = 0, var = 0, valor = 0, ener = 0, bateu = 0, venceu = 0, jogoInt = 1, vida = 3;
 		// var = direcao
 		// var=1 direita
 		// var=2 esquerda
@@ -17,7 +17,7 @@ public class mk2 {
 		// valor= valor a percorer
 
 		System.out.println(
-						  "                                                                                                                        \n"
+				"                                                                                                                        \n"
 						+ "                                                                                                                        \n"
 						+ "                                                                                                                        \n"
 						+ "                          .                                                                  .                          \n"
@@ -75,12 +75,13 @@ public class mk2 {
 			System.out.println("então tome coidado com o numero de instruções");
 			System.out.println("");
 			System.out.println("");
-			System.out.println("voce tera 3 vidas quando vc bater ele retornara para o local antes da intruçao que o vez bater ");
+			System.out.println(
+					"voce tera 3 vidas quando vc bater ele retornara para o local antes da intruçao que o vez bater ");
 			System.out.println("");
 			System.out.println("digite a potência da bateria do robô em J");
 			System.out.println("lembrando que se não for o suficiente ela vai acabar no meio do caminho");
 			ener = entrada.nextInt();
-			vida =3;
+			vida = 3;
 			while (venceu != 1 && bateu != 1) {
 
 				while (i >= 0 && i < 12 && bateu != 1) {
@@ -89,7 +90,7 @@ public class mk2 {
 					System.out.println("");
 					System.out.println("1 segmento");
 					System.out.println("");
-					System.out.println("voce tem "+vida+" vidas sobrando");
+					System.out.println("voce tem " + vida + " vidas sobrando");
 					System.out.println("");
 					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
 					System.out.println("");
@@ -108,11 +109,12 @@ public class mk2 {
 								i -= valor;
 							}
 						}
-						if (var == 3 || var == 4 || i < 0 || i > 12 ) {
-							vida-=1;
-							
-						}if(vida<=0|| ener < 0) {
-							
+						if (var == 3 || var == 4 || i < 0 || i > 12) {
+							vida -= 1;
+
+						}
+						if (vida <= 0 || ener < 0) {
+
 							bateu++;
 						}
 						System.out.println(vida);
@@ -127,7 +129,7 @@ public class mk2 {
 					System.out.println("");
 					System.out.println("2 segmento");
 					System.out.println("");
-					System.out.println("voce tem "+vida+" vidas sobrando");
+					System.out.println("voce tem " + vida + " vidas sobrando");
 					System.out.println("");
 					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
 					System.out.println("");
@@ -143,14 +145,14 @@ public class mk2 {
 						} else {
 							if (var == 3 || var == 2 && i == 12) {
 								i -= valor;
-							
+
 							} else {
-								if (var == 1 || var == 2 || i < 12 || i > 21 ) {
-									vida-=1;
+								if (var == 1 || var == 2 || i < 12 || i > 21) {
+									vida -= 1;
 								}
-								if(vida<=0|| ener < 0) {
+								if (vida <= 0 || ener < 0) {
 									bateu++;
-									
+
 								}
 							}
 						}
@@ -165,7 +167,7 @@ public class mk2 {
 					System.out.println("");
 					System.out.println("3 segmento");
 					System.out.println("");
-					System.out.println("voce tem "+vida+" vidas sobrando");
+					System.out.println("voce tem " + vida + " vidas sobrando");
 					System.out.println("");
 					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
 					System.out.println("");
@@ -180,14 +182,16 @@ public class mk2 {
 						if (var == 1) {
 							i += valor;
 						} else {
-							if (var == 2 || var == 3 && i == 21) {
-								i -= valor;
+							if (i - valor >= 12) {
+								if (var == 2 || var == 3 && i == 21) {
+									i -= valor;
+								}
 							} else {
 
-								if (var == 3 || var == 4 || i < 21 || i > 33 ) {
-									vida-=1;
+								if (var == 3 || var == 4 || i < 21 || i > 33) {
+									vida -= 1;
 								}
-								if(vida<=0|| ener < 0) {
+								if (vida <= 0 || ener < 0) {
 									bateu++;
 								}
 							}
@@ -203,7 +207,7 @@ public class mk2 {
 					System.out.println("");
 					System.out.println("4 segmento");
 					System.out.println("");
-					System.out.println("voce tem "+vida+" vidas sobrando");
+					System.out.println("voce tem " + vida + " vidas sobrando");
 					System.out.println("");
 					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
 					System.out.println("");
@@ -218,14 +222,16 @@ public class mk2 {
 						if (var == 3) {
 							i += valor;
 						} else {
-							if (var == 4 || var == 2 && i == 33) {
-								i -= valor;
+							if (i - valor >= 21) {
+								if (var == 4 || var == 2 && i == 33) {
+									i -= valor;
+								}
 							} else {
 
-								if (var == 1 || var == 2 || i < 33 || i > 39 ) {
-									vida-=1;
+								if (var == 1 || var == 2 || i < 33 || i > 39) {
+									vida -= 1;
 								}
-								if(vida<=0|| ener < 0) {
+								if (vida <= 0 || ener < 0) {
 									bateu++;
 								}
 							}
@@ -241,7 +247,7 @@ public class mk2 {
 					System.out.println("");
 					System.out.println("5 segmento");
 					System.out.println("");
-					System.out.println("voce tem "+vida+" vidas sobrando");
+					System.out.println("voce tem " + vida + " vidas sobrando");
 					System.out.println("");
 					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
 					System.out.println("");
@@ -256,14 +262,16 @@ public class mk2 {
 						if (var == 1) {
 							i += valor;
 						} else {
-							if (var == 2 || var == 4 && i == 39) {
-								i -= valor;
+							if (i - valor >= 33) {
+								if (var == 2 || var == 4 && i == 39) {
+									i -= valor;
+								}
 							} else {
 
-								if (var == 3 || var == 4 || i < 39 || i > 51 ) {
-									vida-=1;
+								if (var == 3 || var == 4 || i < 39 || i > 51) {
+									vida -= 1;
 								}
-								if(vida<=0|| ener < 0) {
+								if (vida <= 0 || ener < 0) {
 									bateu++;
 								}
 							}
@@ -280,7 +288,7 @@ public class mk2 {
 					System.out.println("");
 					System.out.println("6 segmento");
 					System.out.println("");
-					System.out.println("voce tem "+vida+" vidas sobrando");
+					System.out.println("voce tem " + vida + " vidas sobrando");
 					System.out.println("");
 					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
 					System.out.println("");
@@ -297,14 +305,16 @@ public class mk2 {
 							if (i >= 60) {
 								venceu++;
 							} else {
-								if (var == 3 || var == 2 && i == 51) {
-									i -= valor;
+								if (i - valor >= 39) {
+									if (var == 3 || var == 2 && i == 51) {
+										i -= valor;
+									}
 								} else {
 
-									if (var == 1 || var == 2 || i < 51 ) {
-										vida-=1;
+									if (var == 1 || var == 2 || i < 51) {
+										vida -= 1;
 									}
-									if(vida<=0|| ener < 0) {
+									if (vida <= 0 || ener < 0) {
 										bateu++;
 									}
 								}
@@ -323,7 +333,7 @@ public class mk2 {
 					System.out.println("");
 					System.out.println("");
 					System.out.println(
-									  "██████   █████  ██████   █████  ██████  ███████ ███    ██ ███████     ██    ██  ██████   ██████ ███████     ██    ██ ███████ ███    ██  ██████ ███████ ██    ██ \n"
+							"██████   █████  ██████   █████  ██████  ███████ ███    ██ ███████     ██    ██  ██████   ██████ ███████     ██    ██ ███████ ███    ██  ██████ ███████ ██    ██ \n"
 									+ "██   ██ ██   ██ ██   ██ ██   ██ ██   ██ ██      ████   ██ ██          ██    ██ ██    ██ ██      ██          ██    ██ ██      ████   ██ ██      ██      ██    ██ \n"
 									+ "██████  ███████ ██████  ███████ ██████  █████   ██ ██  ██ ███████     ██    ██ ██    ██ ██      █████       ██    ██ █████   ██ ██  ██ ██      █████   ██    ██ \n"
 									+ "██      ██   ██ ██   ██ ██   ██ ██   ██ ██      ██  ██ ██      ██      ██  ██  ██    ██ ██      ██           ██  ██  ██      ██  ██ ██ ██      ██      ██    ██ \n"
@@ -339,7 +349,7 @@ public class mk2 {
 						System.out.println("");
 						System.out.println("");
 						System.out.println(
-										  "             _           _            _                         _                              \n"
+								"             _           _            _                         _                              \n"
 										+ "     /\\     | |         | |          (_)                       | |                  _        _ \n"
 										+ "    /  \\    | |__   __ _| |_ ___ _ __ _  __ _    __ _  ___ __ _| |__   ___  _   _  (_)______(_)\n"
 										+ "   / /\\ \\   | '_ \\ / _` | __/ _ \\ '__| |/ _` |  / _` |/ __/ _` | '_ \\ / _ \\| | | |   |______|  \n"
@@ -351,8 +361,7 @@ public class mk2 {
 						System.out.println("");
 					} else {
 						System.out.println("");
-						System.out.println("\n"
-								+ "\n"
+						System.out.println("\n" + "\n"
 								+ "                                               _                                                                                  _       _                                  \n"
 								+ "  _            _        /\\                    | |                                                                                (_)     | |                  _            _ \n"
 								+ " (_)  ______  (_)      /  \\      ___    __ _  | |__     __ _   _ __    __ _   _ __ ___      ___   _   _    __ _   ___    __   __  _    __| |   __ _   ___    (_)  ______  (_)\n"
@@ -361,8 +370,7 @@ public class mk2 {
 								+ " ( )          ( )   /_/    \\_\\  \\___|  \\__,_| |_.__/   \\__,_| |_|     \\__,_| |_| |_| |_|   |___/  \\__,_|  \\__,_| |___/     \\_/   |_|  \\__,_|  \\__,_| |___/   ( )          ( )\n"
 								+ " |/           |/                                                                                                                                             |/           |/ \n"
 								+ "                                                                                                                                                                             \n"
-								+ "\n"
-								+ "");
+								+ "\n" + "");
 						System.out.println("");
 						System.out.println("");
 					}
