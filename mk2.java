@@ -102,7 +102,9 @@ public class mk2 {
 					if (valor % 3 == 0 && var < 5 && var > 0) {
 						ener -= 6;
 						if (var == 1) {
+							if (i - valor <= 12) {
 							i += valor;
+							}
 						} else {
 							if (var == 2) {
 								i -= valor;
@@ -140,7 +142,10 @@ public class mk2 {
 					if (valor % 3 == 0 && var < 5 && var > 0) {
 						ener -= 6;
 						if (var == 4) {
-							i += valor;
+							if (i - valor <= 21) {
+								i += valor;
+							
+							}
 						} else {
 							if (i - valor >= 0) {
 								if (var == 3 || var == 2 && i == 12) {
