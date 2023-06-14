@@ -143,9 +143,10 @@ public class mk2 {
 						if (var == 4) {
 							i += valor;
 						} else {
+							if (i - valor >= 0) {
 							if (var == 3 || var == 2 && i == 12) {
 								i -= valor;
-
+							}
 							} else {
 								if (var == 1 || var == 2 || i < 12 || i > 21) {
 									vida -= 1;
