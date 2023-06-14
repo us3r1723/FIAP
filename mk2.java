@@ -104,6 +104,8 @@ public class mk2 {
 						if (var == 1) {
 							if (i + valor <= 12) {
 							i += valor;
+							}else {
+								vida-=1;
 							}
 						} else {
 							if (var == 2) {
@@ -118,7 +120,7 @@ public class mk2 {
 
 							bateu++;
 						}
-						System.out.println(vida);
+						
 					} else {
 						System.out.println("valores inválidos");
 					}
