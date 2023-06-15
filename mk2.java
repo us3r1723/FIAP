@@ -8,13 +8,13 @@ public class mk2 {
 		// TODO Auto-generated method stub
 		Scanner entrada = new Scanner(System.in);
 		char jogo = 'z';
-		int i = 0, var = 0, valor = 0, ener = 0, bateu = 0, venceu = 0, jogoInt = 1, vida = 9;
-		// var = direcao
+		int i = 0, var = 0, valor = 0, ener = 0, bateu = 0, venceu = 0, jogoInt = 1, vida = 3;
+		// var = direcão
 		// var=1 direita
 		// var=2 esquerda
 		// var=3 baixo
 		// var=4 cima
-		// valor= valor a percorer
+		// valor= valor a percorrer
 
 		System.out.println(
 				"                                                                                                                        \n"
@@ -69,15 +69,15 @@ public class mk2 {
 		System.out.println("");
 		System.out.println("");
 		while (jogoInt != 0) {
-			System.out.println("o seu objetivo é ir do ponto de partida até linha de chegada em verde");
-			System.out.println("o seu robô somente anda de 3 em 3 qudrados");
-			System.out.println("o seu robô consome 6 J por instrução ");
-			System.out.println("então tome coidado com o numero de instruções");
+			System.out.println("O seu objetivo é ir do ponto de partida até a linha de chegada em verde");
+			System.out.println("O robô somente anda de 3 em 3 qudrados");
+			System.out.println("O robô consome 6 J por instrução ");
+			System.out.println("então tome cuidado com o número de instruções");
 			System.out.println("");
 			System.out.println("");
-			System.out.println("voce tera 3 vidas quando vc bater ele retornara para o local antes da intruçao que o vez bater ");
+			System.out.println("Você terá 3 vidas. Quando você bater, ele retornará para o local antes da intrução que o fez bater ");
 			System.out.println("");
-			System.out.println("digite a potência da bateria do robô em J");
+			System.out.println("Digite a potência da bateria do robô em J");
 			System.out.println("lembrando que se não for o suficiente ela vai acabar no meio do caminho");
 			ener = entrada.nextInt();
 			while (venceu != 1 && bateu != 1) {
@@ -86,15 +86,15 @@ public class mk2 {
 					var = 0;
 					valor = 0;
 					System.out.println("");
-					System.out.println("1 segmento");
+					System.out.println("1° segmento");
 					System.out.println("");
-					System.out.println("voce tem " + vida + " vidas sobrando");
+					System.out.println("Você tem " + vida + " vida(s) sobrando");
 					System.out.println("");
-					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
+					System.out.println("1-Direita, 2-Esquerda, 3-Cima, 4-Baixo");
 					System.out.println("");
 					var = entrada.nextInt();
 					System.out.println("");
-					System.out.println("quantidade obs: precisa ser múltiplo de 3");
+					System.out.println("Quantidade de quadrados que o robô andará:  obs: precisa ser múltiplo de 3");
 					System.out.println("");
 					valor = entrada.nextInt();
 
@@ -125,7 +125,7 @@ public class mk2 {
 						}
 
 					} else {
-						System.out.println("valores inválidos");
+						System.out.println("Valores inválidos");
 					}
 
 				}
@@ -133,15 +133,15 @@ public class mk2 {
 					var = 0;
 					valor = 0;
 					System.out.println("");
-					System.out.println("2 segmento");
+					System.out.println("2° segmento");
 					System.out.println("");
-					System.out.println("voce tem " + vida + " vidas sobrando");
+					System.out.println("Você tem " + vida + " vida(s) sobrando");
 					System.out.println("");
-					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
+					System.out.println("1-Direita, 2-Esquerda, 3-Cima, 4-Baixo");
 					System.out.println("");
 					var = entrada.nextInt();
 					System.out.println("");
-					System.out.println("quantidade obs: precisa ser múltiplo de 3");
+					System.out.println("Quantidade de quadrados que o robô andará:  obs: precisa ser múltiplo de 3");
 					valor = entrada.nextInt();
 
 					if (valor % 3 == 0 && var < 5 && var > 0) {
@@ -177,7 +177,7 @@ public class mk2 {
 						}
 
 					} else {
-						System.out.println("valores inválidos");
+						System.out.println("Valores inválidos");
 					}
 
 				}
@@ -185,15 +185,15 @@ public class mk2 {
 					var = 0;
 					valor = 0;
 					System.out.println("");
-					System.out.println("3 segmento");
+					System.out.println("3° segmento");
 					System.out.println("");
-					System.out.println("voce tem " + vida + " vidas sobrando");
+					System.out.println("Você tem " + vida + " vida(s) sobrando");
 					System.out.println("");
-					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
+					System.out.println("1-Direita, 2-Esquerda, 3-Cima, 4-Baixo");
 					System.out.println("");
 					var = entrada.nextInt();
 					System.out.println("");
-					System.out.println("quantidade obs: precisa ser múltiplo de 3");
+					System.out.println("Quantidade de quadrados que o robô andará:  obs: precisa ser múltiplo de 3");
 					System.out.println("");
 					valor = entrada.nextInt();
 
@@ -230,7 +230,7 @@ public class mk2 {
 						}
 
 					} else {
-						System.out.println("valores inválidos");
+						System.out.println("Valores inválidos");
 					}
 
 				}
@@ -238,15 +238,15 @@ public class mk2 {
 					var = 0;
 					valor = 0;
 					System.out.println("");
-					System.out.println("4 segmento");
+					System.out.println("4° segmento");
 					System.out.println("");
-					System.out.println("voce tem " + vida + " vidas sobrando");
+					System.out.println("Você tem " + vida + " vida(s) sobrando");
 					System.out.println("");
-					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
+					System.out.println("1-Direita, 2-Esquerda, 3-Cima, 4-Baixo");
 					System.out.println("");
 					var = entrada.nextInt();
 					System.out.println("");
-					System.out.println("quantidade obs: precisa ser múltiplo de 3");
+					System.out.println("Quantidade de quadrados que o robô andará:  obs: precisa ser múltiplo de 3");
 					System.out.println("");
 					valor = entrada.nextInt();
 
@@ -281,7 +281,7 @@ public class mk2 {
 
 						}
 					} else {
-						System.out.println("valores inválidos");
+						System.out.println("Valores inválidos");
 					}
 
 				}
@@ -289,15 +289,15 @@ public class mk2 {
 					var = 0;
 					valor = 0;
 					System.out.println("");
-					System.out.println("5 segmento");
+					System.out.println("5° segmento");
 					System.out.println("");
-					System.out.println("voce tem " + vida + " vidas sobrando");
+					System.out.println("Você tem " + vida + " vida(s) sobrando");
 					System.out.println("");
-					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
+					System.out.println("1-Direita, 2-Esquerda, 3-Cima, 4-Baixo");
 					System.out.println("");
 					var = entrada.nextInt();
 					System.out.println("");
-					System.out.println("quantidade obs: precisa ser múltiplo de 3");
+					System.out.println("Quantidade de quadrados que o robô andará:  obs: precisa ser múltiplo de 3");
 					System.out.println("");
 					valor = entrada.nextInt();
 
@@ -332,7 +332,7 @@ public class mk2 {
 
 						}
 					} else {
-						System.out.println("valores inválidos");
+						System.out.println("Valores inválidos");
 					}
 
 				}
@@ -340,15 +340,15 @@ public class mk2 {
 					var = 0;
 					valor = 0;
 					System.out.println("");
-					System.out.println("6 segmento");
+					System.out.println("6° segmento");
 					System.out.println("");
-					System.out.println("voce tem " + vida + " vidas sobrando");
+					System.out.println("Você tem " + vida + " vida(s) sobrando");
 					System.out.println("");
-					System.out.println("1-direita, 2-esquerda, 3-cima, 4-baixo");
+					System.out.println("1-Direita, 2-Esquerda, 3-Cima, 4-Baixo");
 					System.out.println("");
 					var = entrada.nextInt();
 					System.out.println("");
-					System.out.println("quantidade obs: precisa ser múltiplo de 3");
+					System.out.println("Quantidade de quadrados que o robô andará:  obs: precisa ser múltiplo de 3");
 					System.out.println("");
 					valor = entrada.nextInt();
 
@@ -384,7 +384,7 @@ public class mk2 {
 
 						}
 					} else {
-						System.out.println("valores inválidos");
+						System.out.println("Valores inválidos");
 					}
 
 				}
@@ -440,7 +440,7 @@ public class mk2 {
 			}
 
 			System.out.println("");
-			System.out.println("deseja jogar novamente?  S|n");
+			System.out.println("Deseja jogar novamente?  s|n");
 			System.out.println("");
 			jogo = Character.toUpperCase(entrada.next().charAt(0));
 			if (jogo == 'N') {
