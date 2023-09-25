@@ -34,6 +34,10 @@ public class sla {
 		//Check-Pont = 40%
 		double mediacp = 0, mediasp = 0, mediaSprint = 0;
 		
+		System.out.println("infome a nota dos Sprint");
+		mediaSprint = entrada.nextDouble();
+
+
 		mediacp = mediaCheck * 0.40;
 		mediasp = mediaSprint * 0.60;
 
